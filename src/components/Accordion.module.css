@@ -1,0 +1,20 @@
+/* .wrapper {
+  color: white;
+  background-color: rgb(39, 39, 39);
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+} */
+.wrapper {
+  color: white;
+  background-color: rgb(39, 39, 39);
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  /* border: 1px solid red; */
+  margin: auto;
+}
