@@ -6,9 +6,9 @@
 } */
 .wrapper {
   color: white;
-  background-color: rgb(39, 39, 39);
+  background-color: #111;
   padding-top: 1rem;
-  padding-bottom: 1.5rem;
+
   position: absolute;
   left: 50%;
   top: 50%;
@@ -17,4 +17,47 @@
   max-width: 500px;
   /* border: 1px solid red; */
   margin: auto;
+}
+
+/* h2 {
+  padding-left: 0.75rem;
+} */
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  font-size: 1.5rem;
+  color: #e7e7e7;
+}
+
+.number {
+  margin: 0 0.5rem;
+  color: #707070;
+  font-weight: 800;
+  text-align: center;
+}
+
+.title.open,
+.number.open {
+  color: #5b1fea;
+}
+
+.icon {
+  margin: 0 0.5rem;
+}
+
+.wrapper.open {
+  border-top: 4px solid #5b1fea;
+}
+
+.wrapper.closed {
+  padding-bottom: 1rem;
+}
+
+.wrapper .answer {
+  background-color: #292929;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0.5rem;
 }
