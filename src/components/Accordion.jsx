@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Accordion.module.css';
 import { BiSolidChevronDown } from 'react-icons/bi';
 
@@ -25,11 +25,13 @@ function Accordion({ data }) {
 function AccordionItem({ title, answer, num, curOpen, onOpen }) {
   const isOpen = num === curOpen;
 
+  const contentHeight = useRef();
+
   function handleOpen() {
     onOpen(isOpen ? null : num);
   }
   return (
-    <>
+    <div className={styles.wrapper2}>
       <div
         className={`${styles.title} ${isOpen ? styles.open : styles.closed}`}
         onClick={handleOpen}
@@ -49,14 +51,21 @@ function AccordionItem({ title, answer, num, curOpen, onOpen }) {
           className={`${styles.icon} ${isOpen ? styles.open : ''}`}
         />
       </div>
-      {isOpen ? (
-        <div>
-          <p className={styles.answer}>{answer}</p>
-        </div>
-      ) : (
-        ''
-      )}
-    </>
+
+      <div
+        className={`${styles.answer_container}`}
+        ref={contentHeight}
+        style={
+          isOpen
+            ? { height: contentHeight.current.scrollHeight }
+            : { height: '0px' }
+        }
+      >
+        <p className={`${styles.answer_content} ${isOpen ? styles.open : ''}`}>
+          {answer}
+        </p>
+      </div>
+    </div>
   );
 }
 
