@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './Accordion.module.css';
 import { BiSolidChevronDown } from 'react-icons/bi';
 
@@ -25,7 +25,15 @@ function Accordion({ data }) {
 function AccordionItem({ title, answer, num, curOpen, onOpen }) {
   const isOpen = num === curOpen;
 
-  const contentHeight = useRef();
+  const contentHeight = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      const newScrollHeight = contentHeight.current.scrollHeight + 16;
+
+      contentHeight.current.style.height = `${newScrollHeight}px`;
+    }
+  }, [isOpen]);
 
   function handleOpen() {
     onOpen(isOpen ? null : num);
