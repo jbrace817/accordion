@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Accordion from './components/Accordion';
 
 const process = [
@@ -12,8 +11,8 @@ const process = [
       <span>
         React then compares the new virtual DOM with the previous one to
         identify the differences. This is where the reconciliation algorithm
-        comes into play. React doesn't update the entire DOM but only the parts
-        that have changed. It does this by minimizing the number of DOM
+        comes into play. React doesn&apos;t update the entire DOM but only the
+        parts that have changed. It does this by minimizing the number of DOM
         operations required. <br></br> <br></br> <b>Keyed Elements:</b> React
         uses keys, typically provided by developers, to identify elements in a
         list. By comparing keys, React can efficiently determine which elements
