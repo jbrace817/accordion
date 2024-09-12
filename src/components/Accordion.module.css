@@ -22,10 +22,6 @@
   padding-top: 1rem;
 }
 
-/* .title:nth-child() {
-  border-radius: 10px 10px 0 0;
-} */
-
 .text {
   display: flex;
 }
@@ -55,11 +51,6 @@
   border-top: none;
   padding-bottom: 1rem;
 }
-
-/* .title.closed:last-child {
-  border-bottom: none;
-  border-radius: 0 0 10px 10px;
-} */
 
 .icon {
   margin: 0 0.5rem;
