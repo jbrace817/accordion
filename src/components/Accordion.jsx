@@ -41,7 +41,9 @@ function AccordionItem({ title, answer, num, curOpen, onOpen }) {
   return (
     <div className={styles.wrapper2}>
       <div
-        className={`${styles.title} ${isOpen ? styles.open : styles.closed}`}
+        className={`${num === 0 ? styles.first_item : styles.title} ${
+          isOpen ? styles.open : styles.closed
+        }`}
         onClick={handleOpen}
       >
         <div className={styles.text}>
